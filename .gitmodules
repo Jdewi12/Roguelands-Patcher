@@ -1,0 +1,3 @@
+[submodule "octodiff"]
+	path = octodiff
+	url = https://github.com/OctopusDeploy/Octodiff
