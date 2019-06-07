@@ -1,5 +1,5 @@
 # Auto-Octodiff
-Uses Octodiff install a patch for Roguelands.
+Uses Octodiff to automatically install a patch for Roguelands.
 
 &nbsp;
 
