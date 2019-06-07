@@ -50,12 +50,20 @@ namespace Auto_Octodiff
                 var exePath = Path.GetDirectoryName(textBox1.Text); // get the folder of Roguelands.exe
                 var assemblyDirectory = Path.Combine(exePath, @"Roguelands_Data\Managed");
                 if (!Directory.Exists(assemblyDirectory))
-                    throw new System.ArgumentException("Unable to find directory", assemblyDirectory);
+                {
+                    textBox2.AppendText("Unable to find directory: " + assemblyDirectory);
+                    return;
+                }
                 var assemblyPath = Path.Combine(assemblyDirectory, "Assembly-CSharp.dll");
                 if (!File.Exists(assemblyPath))
-                    throw new System.ArgumentException("Unable to find file", assemblyPath);
+                { 
+                    textBox2.AppendText("Unable to find file: " + assemblyPath);
+                    return;
+                }
                 var cleanPath = Path.Combine(assemblyDirectory, "Original_Assembly-CSharp.dll");
-                if(!File.Exists(cleanPath))
+                if (File.Exists(cleanPath))
+                    textBox2.AppendText("Warning: Original_Assembly-CSharp.dll already exists. This indicates the assembly may have already been patched. A new Original_Assembly-CSharp.dll will not be created, and the Assembly-CSharp.dll will be replaced with a patched version of the Original_Assembly-CSharp.dll\r\n");
+                else
                     File.Copy(assemblyPath, cleanPath, true);
 
                 var deltaApplier = new DeltaApplier { SkipHashCheck = false };
@@ -64,11 +72,12 @@ namespace Auto_Octodiff
                 using (var newFileStream = new FileStream(assemblyPath, FileMode.Create, FileAccess.ReadWrite, FileShare.Read))
                 {
                     deltaApplier.Apply(basisStream, new BinaryDeltaReader(deltaStream, new ConsoleProgressReporter()), newFileStream);
+                    textBox2.AppendText("Successfully patched.\r\n");
                 }
             }
             catch(Exception err)
             {
-                textBox2.Text = err.Message;
+                textBox2.AppendText(err.Message + "\r\n");
             }
             
 
