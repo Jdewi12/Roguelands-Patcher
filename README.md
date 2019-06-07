@@ -1,6 +1,7 @@
 # Auto-Octodiff
 Uses Octodiff install a patch for Roguelands.
 
+
 Changelog (WIP, probably missing a lot):
 - Make enemy hp scale in multiplayer (makes singleplayer a bit easier)
 - Scaled high hp numbers down (only really noticeable on enemies with over 2.5mil hp. A 6 million health boss in singleplayer would have around 3.6 million health, but with 4 players it would have around 7.6 million health
