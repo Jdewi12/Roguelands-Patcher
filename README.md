@@ -19,3 +19,7 @@ Changelog (WIP, probably missing a lot):
 - Fixed Angelic Augur and Prism in multiplayer
 - Changed exp curve
 - Probably a lot more I forgot about
+
+&nbsp;
+
+When compiling from source, make sure Octodiff.exe, Auto-Octodiff.exe (or whatever the patcher is named), and the patch file are all in the same folder. The patch file needs to just be named "patch". You can replace the patch with any other patch created with Octodiff.
