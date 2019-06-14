@@ -4,7 +4,9 @@ Uses Octodiff to automatically install a patch for Roguelands.
 &nbsp;
 
 **Changelog** (WIP, probably missing a lot):
+
 **New**:
+
 - Made gear exp from killing/harvesting scale with challenge level, rather than getting a flat bonus
 - Changed explorer to "Explorers value discover more than anything. Explorers regen 2 stamina per tick instead of 1."
 - Levelup effects like Antihero, Scientist, Baby Sliver, etc. that used to have randomness are now consistent and alternating
@@ -12,7 +14,9 @@ Uses Octodiff to automatically install a patch for Roguelands.
 - Made the size of Healing Ward and Angelic Augur scale with FTH. Base size is 80% old size, and each fth point adds 1% to size. e.g. 220 fth is triple the size.
 - Made enemies start targeting the nearest player when they take damage, regardless of range. Stops people from killing offscreen enemies easily.
 - Changed carbine cost to 5 stamina, to match Gruu talisman
+
 **Old**:
+
 - Make enemy hp scale in multiplayer (makes singleplayer a bit easier)
 - Scaled high hp numbers down (only really noticeable on enemies with over 2.5mil hp. A 6 million health boss in singleplayer would have around 3.6 million health, but with 4 players it would have around 7.6 million health
 - Slightly make globs of aether scale with level, so they are slightly useful
