@@ -1,7 +1,21 @@
 # Roguelands Patcher
 Uses Octodiff to automatically install a patch for Roguelands.
 
-&nbsp;
+**To install**
+1. Go to [releases](https://github.com/Jdewi12/Roguelands-Patcher/releases) and click on `Roguelands.Patcher.zip` under the latest release to download it
+2. Extract the contents of the zip file
+3. Go to the location you extracted the files to and run `Roguelands Patcher.exe`
+4. In the window that opens, press `Select File` and select your Roguelands.exe (if you installed via steam, this is usually in `Program Files (x86)\Steam\steamapps\common\Roguelands`
+5. Click `Patch` and if everything worked correctly it should output `Successfully patched.` 
+6. Close the patcher and now when you run Roguelands it will be modified with my changes.
+
+**To uninstall**
+When I stop being lazy I will make this an option in the patcher, but for now:
+1. Navigate to your Roguelands installation folder (if you installed via steam, this is usually in `Program Files (x86)\Steam\steamapps\common\Roguelands`
+2. Go to the `Roguelands_Data` folder, and then the `Managed` folder
+3. Delete `Assembly-CSharp.dll`
+4. Rename `Original_Assembly-CSharp.dll` to `Assembly-CSharp.dll` (case sensitive)
+5. Now when you run Roguelands it should be the original version.
 
 **Changelog** (WIP, probably missing a lot):
 
