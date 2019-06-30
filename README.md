@@ -10,6 +10,7 @@ Uses Octodiff to automatically install a patch for Roguelands.
 6. Close the patcher and now when you run Roguelands it will be modified with my changes.
 
 **To uninstall**
+
 When I stop being lazy I will make this an option in the patcher, but for now:
 1. Navigate to your Roguelands installation folder (if you installed via steam, this is usually in `Program Files (x86)\Steam\steamapps\common\Roguelands`
 2. Go to the `Roguelands_Data` folder, and then the `Managed` folder
